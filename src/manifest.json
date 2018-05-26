@@ -1,0 +1,16 @@
+{
+  "name": "HN highlighter",
+  "options_page": "options.html",
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [
+    {
+      "js": ["hn.bundle.js"],
+      "matches": ["https://news.ycombinator.com/*"]
+    }
+  ],
+  "permissions": ["storage"]
+}
